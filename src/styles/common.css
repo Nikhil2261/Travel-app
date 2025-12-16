@@ -6,13 +6,14 @@
   --primary: #000000;
   --radius-lg: 16px;
   --gap: 16px;
-  --container-max: 1255px;
+  --container-max: 1231px;
 }
 
 /* Reset + Base */
 * { box-sizing: border-box; }
 
 html, body, #root {
+  
   height: 100%;
 }
 
@@ -57,7 +58,7 @@ body {
 .btn-ghost {
   background: transparent;
   border: 1px solid rgba(17,24,39,0.06);
-  color: var(--muted);
+  color:  #ffffff;
 }
 
 /* Pills */
@@ -78,7 +79,7 @@ body {
 
 
 /* ===== Offers section (Figma-like) ===== */
-.offers-section { margin-top: 185px; }
+.offers-section { margin-top: 85px; }
 
 .offers-header {
   display:flex;
@@ -343,38 +344,27 @@ body {
 
 /* ===== HERO + Category rect + SearchCard (design-accurate) ===== */
 
-/* hero related */
-.hero { position: relative; overflow: visible; }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  height: 700px;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-}
-.hero-top { position: relative; z-index: 6; padding-top: 47px; }
+
 
 /* floating category rectangular strip */
-.category-rect-wrap {
+/* .category-rect-wrap {
   position: relative;
   width: 100%;
   display:flex;
   justify-content:center;
   pointer-events:none;
   margin-top: 0px;
-}
-.category-rect {
+} */
+/* .category-rect {
   height: 128px;
   width: min(864px, 100%);
   background: linear-gradient(#ffffff, #ffffff);
   border-radius: 12px;
   padding: 14px 18px;
   box-shadow: 0 7px 4px rgba(0,0,0,0.38);
-  /* transform: translateY(-52%); float above the search card */
-  transform: translateY(27px); /* PULL the big rect DOWN so it touches the search card */
+ 
   pointer-events:auto;
-}
+} */
 
 /* inside the big rectangle: the small boxes row */
 .category-list {
@@ -404,18 +394,10 @@ body {
 }
 
 /* search card main */
-.search-card {
-  height: 420px;
-  padding-top: 80px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom:5px ;
-  /* padding: 22px; */
-  border-radius: 12px;
-  background: var(--card-bg);
-  margin-top: -32px; /* this plus category translate creates float overlap */
-  box-shadow: 0 18px 40px rgba(2,6,23,0.08);
-  z-index: 4;
+ .search-card {
+   min-height: 360px;
+  height: auto; 
+  
 }
 
 /* search-main: wide top inputs area styled similar to design rows */
@@ -467,9 +449,12 @@ body {
 
 /* large centered search button */
 .btn-search {
-      height: 60px;
-    width: 96%;
-    max-width: 260px;
+
+  height: 60px;
+    width: 260px;
+  max-width: 280px;
+
+   
   padding: 14px 40px;
   border-radius: 48px;
   background: #2680ff;
@@ -481,13 +466,15 @@ body {
 
 /* responsive adjustments */
 @media (max-width: 1100px) {
-  .category-rect { width: min(980px, 96%); transform: translateY(-48%); }
+  
+  .category-rect { width: min(980px, 80%); transform: translateY(-5px); }
   .category-pill-rect { width:70px; }
   .category-thumb-rect { width:54px; height:54px; }
   .search-main { grid-template-columns: repeat(2, 1fr); }
+  .search-card { height: auto;}
 }
 @media (max-width: 640px) {
-  .hero-bg { height:420px; }
+  .hero-bg { height:100%; }
   .category-rect { transform: translateY(-40%); padding:10px; }
   .category-list { gap:8px; flex-wrap:wrap; justify-content:center; }
   .category-pill-rect { width:64px; }
@@ -495,4 +482,127 @@ body {
   .btn-search { width:90%; }
 }
 
+/* 
+======================================================================= */
+/* ===============================
+   HERO FLOAT SYSTEM (FINAL)
+   =============================== */
 
+.hero {
+  position: relative;
+  /* overflow: hidden;
+  height: 760px; */
+   padding-bottom: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+ top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+}
+
+.hero-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== CATEGORY FLOAT ===== */
+
+.category-float {
+  position: relative;
+  margin-top: 40px;
+  z-index: 3;
+}
+
+.category-rect {
+  max-width: 792px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+}
+
+/* ===== SEARCH FLOAT (OVERLAP) ===== */
+
+.search-float {
+  position: relative;
+  margin-top: -30px; /* 🔥 THIS IS THE KEY */
+  z-index: 2;
+}
+
+.search-card {
+    position: relative;
+  padding: 28px 24px 64px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(2,6,23,0.08);
+}
+
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .search-float {
+    margin-top: -18px;
+  }
+
+ .hero {
+    height: 877px; /* tablet ke liye zyada height */
+  }
+
+  .category-float {
+    margin-top: 32px;
+  }
+
+  .search-float {
+    margin-top: -22px;
+  }
+}
+
+
+.search-action {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;             /* आधा बाहर */
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: -32px;
+}
+
+.hero-logo {
+  height: 101px;        /* desktop */
+  width: auto;
+  object-fit: contain;
+}
+
+/* tablet */
+@media (max-width: 1100px) {
+  .hero-logo {
+    height: 100px;
+  }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  .hero-logo {
+    height: 34px;
+  }
+}

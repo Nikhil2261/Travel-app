@@ -437,7 +437,7 @@
 .m-nav-icon {
   width: 26px;
   height: 26px;
-  border-radius: 999px;
+  border-radius: 0px;
   background: #f3f4f6;
   display: flex;
   align-items: center;
@@ -448,11 +448,70 @@
 
 /* active = tickets */
 .m-nav-item.active .m-nav-icon {
-  background: #2563eb;
+  
   color: #ffffff;
 }
 
 .m-nav-item.active .m-nav-label {
   color: #2563eb;
   font-weight: 700;
+}
+
+
+/* 
+============================================ */
+
+.m-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+/* icon base */
+.m-nav-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+/* 🔥 DESKTOP hover */
+@media (hover: hover) {
+  .m-nav-item:hover {
+    color: #1f6cff;
+  }
+
+  .m-nav-item:hover .m-nav-icon {
+    transform: translateY(-2px) scale(1.05);
+  }
+}
+
+/* 📱 Mobile tap feedback */
+.m-nav-item:active {
+  transform: scale(0.96);
+}
+
+/* ♿ keyboard accessibility */
+.m-nav-item:focus-visible {
+  outline: none;
+  color: #1f6cff;
+}
+
+.m-nav-item:focus-visible .m-nav-icon {
+  transform: scale(1.1);
+}
+
+/* ✅ active tab (current page) */
+.m-nav-item.active {
+  color: #1f6cff;
+}
+
+.m-nav-item.active .m-nav-icon {
+  transform: scale(1.1);
 }

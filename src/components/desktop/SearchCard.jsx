@@ -16,7 +16,7 @@ function InputBlock({ label, title, subtitle, right }) {
 
 export default function SearchCard(){
   return (
-    <div className="search-card card" role="region" aria-label="flight search" style={{marginBottom:'115px'}}>
+    <div className="search-card card" role="region" aria-label="flight search" >
       {/* top pills row (radio style) */}
       <div style={{display:'flex', alignItems:'center', justifyContent:'flex-start', gap:18,marginTop:'11px',marginBottom:'28px'}}>
         <label style={{display:'flex', alignItems:'center', gap:8}}>
@@ -70,11 +70,18 @@ export default function SearchCard(){
           </div>
         </div>
       </div>
+      <div className="search-action">
+  <button className="btn-search">SEARCH</button>
+</div>
 
-      {/* centered search button */}
-      <div style={{display:'flex', justifyContent:'center', marginTop:18}}>
-        <button className="btn-search">SEARCH</button>
-      </div>
     </div>
+    
   );
 }
+
+
+// {/* centered search button */}
+//       {/* <div style={{display:'flex', justifyContent:'center', marginTop:18}}> */}
+//       <div style={{display:'flex', justifyContent:'center', marginTop:18}}>
+//         <button className="btn-search">SEARCH</button>
+//       </div>
