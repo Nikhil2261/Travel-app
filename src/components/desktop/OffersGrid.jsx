@@ -15,8 +15,8 @@ export default function OffersGrid() {
     { id: 4, img: '/src/assets/455954512.jpg', title: 'Holiday Packages 15% off', tag: 'HOLIDAYS', cta: 'BOOK NOW' },
     { id: 5, img: '/src/assets/455954512.jpg', title: 'Bank Offer: Extra Cashback', tag: 'BANK OFFER', cta: 'BOOK NOW' },
     { id: 6, img: '/src/assets/455954512.jpg', title: 'Student fares available', tag: 'HOTELS', cta: 'BOOK NOW' },
-    { id: 7, img: '/src/assets/455954512.jpg', title: 'Early Bird Discounts', tag: 'TRAVEL', cta: 'BOOK NOW' },
-    { id: 8, img: '/src/assets/455954512.jpg', title: 'Limited Time Deal', tag: 'MORE', cta: 'BOOK NOW' },
+    // { id: 7, img: '/src/assets/455954512.jpg', title: 'Early Bird Discounts', tag: 'TRAVEL', cta: 'BOOK NOW' },
+    // { id: 8, img: '/src/assets/455954512.jpg', title: 'Limited Time Deal', tag: 'MORE', cta: 'BOOK NOW' },
   ];
 
 
@@ -45,10 +45,12 @@ export default function OffersGrid() {
           {visible.map(item => (
             <OfferCard
               key={item.id}
-              img={item.img}
-              title={item.title}
-              
-              cta={item.cta}
+  img={item.img}
+  tag={item.tag}
+  title="Grab Up to 25% OFF* on Hotels"
+  headline="UNLOCK BIG SAVINGS"
+  code="HOLIDAY25"
+  cta="BOOK NOW"
             />
           ))}
         </div>

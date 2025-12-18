@@ -127,7 +127,7 @@ body {
 /* inside the wrapper we show a white rounded inner area */
 .offers-card-wrap .offers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 
 }
@@ -158,6 +158,7 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 1100px) {
+ 
   .offers-card-wrap .offers-grid {
     grid-template-columns: repeat(2,1fr);
   }
@@ -324,8 +325,8 @@ body {
 
 /* make footer content fit inside .container width */
 .footer-inner.container {
-  padding-left: 0;
-  padding-right: 0;
+  /* padding-left: 0;
+  padding-right: 0; */
 }
 
 /* Responsive: stack on small screens */
@@ -575,7 +576,7 @@ body {
 .search-action {
   position: absolute;
   left: 50%;
-  bottom: -30px;             /* आधा बाहर */
+  bottom: -30px;             
   transform: translateX(-50%);
   z-index: 5;
 }
@@ -605,4 +606,333 @@ body {
   .hero-logo {
     height: 34px;
   }
+}
+/* =========================
+   FIGMA OFFER CARD
+========================= */
+
+.offer-card-figma {
+      min-width: 318px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(2,6,23,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE */
+.offer-image-wrap {
+  position: relative;
+}
+
+.offer-image-wrap img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TOP RIGHT TAG */
+.offer-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* LEFT BOTTOM OVERLAY */
+.offer-overlay {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  color: #fff;
+  max-width: 80%;
+}
+
+.offer-ribbon {
+
+      display: inline-block;
+    background: #e8f0ff87;
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.offer-overlay h3 {
+
+  margin: 0px 0px 0px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* USE CODE */
+.offer-code {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.offer-code span {
+
+  margin-top: 10px;
+    background: #3b82f6;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.offer-code strong {
+
+  margin-top: 10px;
+    background: #fff;
+    color: #3b82f6;
+    padding: 0px 12px;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+/* BOTTOM CTA */
+.offer-bottom {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offer-cta {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.offer-cta img {
+    width: 8px;
+    height: 10px;
+}
+
+
+/* ===== DESTINATION CARD (FIGMA MATCH) ===== */
+
+.dest-card {
+  padding: 12px;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.dest-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dest-media img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* heart icon */
+.dest-fav-img {
+position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 18px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dest-fav-img img {
+     width: 33px;
+    height: 32px;
+}
+
+/* body */
+.dest-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+/* left */
+.dest-title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.dest-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.dest-location img {
+ width: 8px;
+    height: 12px;
+}
+
+/* right */
+.dest-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* dotted circles */
+.dest-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dest-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+/* Book now button */
+.btn-book {
+  background: #1f6cff;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+
+/* ===== Destination Card ===== */
+
+.dest-card {
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(2,6,23,0.08);
+}
+
+.dest-media {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.dest-media img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Heart icon (top right) */
+.dest-fav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Body */
+.dest-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+/* Title */
+.dest-title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Location row */
+.dest-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.dest-location img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Right action */
+.dest-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 🔥 OVERLAPPING CIRCLES (FIGMA EXACT) */
+.dest-circles {
+  display: flex;
+}
+
+.dest-circles span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  border: 2px solid #fff;
+  margin-left: -6px;   /* 👈 overlap magic */
+}
+
+.dest-circles span:first-child {
+  margin-left: 0;
+}
+
+/* Book now button */
+.btn-book {
+  background: #1f6cff;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
 }

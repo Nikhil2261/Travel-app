@@ -1,22 +1,43 @@
+
 import React from 'react';
+import arrowImg from '/src/assets/Vector 175.png';
 
 export default function OfferCard({
-  img = '/src/assets/455954512.jpg',
-  title = 'Grab Up to 25% OFF*',
-  
+  img,
+  tag = 'HOTELS',
+  headline = 'UNLOCK BIG SAVINGS',
+  title = 'Grab Up to 25% OFF* on Hotels',
+  code = 'HOLIDAY25',
   cta = 'BOOK NOW',
-  alt = 'offer image'
 }) {
   return (
-    <article className="offer-card card" role="article" aria-label={title}>
-      <div className="offer-media" aria-hidden>
-        <img src={img} alt={alt} style={{ width: '100%', height: 120, objectFit: 'cover', borderRadius: 8 }} />
-        { <span className="offer-tag"></span>}
+    <article className="offer-card-figma">
+      
+      {/* IMAGE SECTION */}
+      <div className="offer-image-wrap">
+        <img src={img} alt={title} />
+
+        {/* top-right pill */}
+        <span className="offer-tag">{tag}</span>
+
+        {/* left-bottom text */}
+        <div className="offer-overlay">
+          <span className="offer-ribbon">{headline}</span>
+          <h3>{title}</h3>
+
+          <div className="offer-code">
+            <span>use code</span>
+            <strong>{code}</strong>
+          </div>
+        </div>
       </div>
 
-      <div className="offer-body">
-        <div className="offer-text">{title}</div>
-        <button className="offer-cta" aria-label={`Book ${title}`}>{cta}</button>
+      {/* BOTTOM ROW */}
+      <div className="offer-bottom">
+        <button className="offer-cta">
+          {cta}
+          <img src={arrowImg} alt="arrow" />
+        </button>
       </div>
     </article>
   );
