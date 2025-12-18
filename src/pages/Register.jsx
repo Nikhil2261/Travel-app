@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { validateMobile } from '../utils/validator.js';
+import { validateEmail, validateMobile, validateName } from '../utils/validator.js';
 import '../styles/login.css';
 import bg from '../assets/bglogin.png';
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
+  const [fullName, setFullName] = useState('');
   const [mobile, setMobile] = useState('');
+  const [email, setEmail] = useState('');
 
-  const isFormValid = validateMobile(mobile);
+  const isFormValid =
+    validateName(fullName) &&
+    validateMobile(mobile) &&
+    validateEmail(email);
+
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    // Allow only letters and spaces
+    const onlyLettersAndSpaces = value.replace(/[^a-zA-Z ]/g, '');
+    setFullName(onlyLettersAndSpaces.slice(0, 50));
+  };
 
   const handleMobileChange = (e) => {
     const onlyNumbers = e.target.value.replace(/\D/g, '');
     setMobile(onlyNumbers.slice(0, 10));
   };
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   const handleSubmit = () => {
     if (isFormValid) {
-      console.log('Login with mobile:', mobile);
-      // Add your login logic here
+      console.log('Register:', { fullName, mobile, email });
+      // Add your registration logic here
       navigate('/');
     }
   };
@@ -28,8 +44,18 @@ export default function Login() {
       <div className="login-overlay" />
 
       <div className="login-card">
-        <h2>Login or Create Account</h2>
-        <p>Enter your mobile number to get started</p>
+        <h2>Create Account</h2>
+        <p>Enter your details to get started</p>
+
+        <div className="phone-input">
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={fullName}
+            onChange={handleNameChange}
+            autoComplete="name"
+          />
+        </div>
 
         <div className="phone-input">
           <span>🇮🇳</span>
@@ -44,12 +70,22 @@ export default function Login() {
           />
         </div>
 
+        <div className="phone-input">
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={handleEmailChange}
+            autoComplete="email"
+          />
+        </div>
+
         <button 
           className={`login-btn ${isFormValid ? 'active' : 'inactive'}`}
           disabled={!isFormValid}
           onClick={handleSubmit}
         >
-          CONTINUE
+          REGISTER
         </button>
 
         <div className="divider">
@@ -67,8 +103,8 @@ export default function Login() {
           </button>
         </div>
 
-        <div className="referral" onClick={() => navigate('/register')}>
-          NEW USER? CREATE ACCOUNT
+        <div className="referral" onClick={() => navigate('/login')}>
+          ALREADY HAVE AN ACCOUNT? LOGIN
         </div>
       </div>
     </div>
