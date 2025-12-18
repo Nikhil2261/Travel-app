@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register'
-import Destination from './pages/Destination';
+// import Destination from './pages/Destination';
 
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<Navigate to="/login" />} />
-        <Route path="/destination" element={<Destination />} />
+        {/* <Route path="/destination" element={<Destination />} /> */}
      
       </Routes>
     </BrowserRouter>

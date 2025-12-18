@@ -720,27 +720,6 @@ body {
   display: block;
 }
 
-/* heart icon */
-.dest-fav-img {
-position: absolute;
-    top: 14px;
-    right: 18px;
-    width: 18px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    border: none;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.dest-fav-img img {
-     width: 33px;
-    height: 32px;
-}
 
 /* body */
 .dest-body {
@@ -828,21 +807,34 @@ position: absolute;
 }
 
 /* Heart icon (top right) */
+/* HEART ICON (DESTINATION CARD) */
 .dest-fav {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 34px;
-  height: 34px;
+  top: 14px;
+  right: 14px;
+
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #ff6b6b;
-  color: #fff;
+
+  background: #ffffff;
   border: none;
-  display: grid;
-  place-items: center;
-  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
+  padding: 0;
 }
+
+.dest-fav img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 
 /* Body */
 .dest-body {
