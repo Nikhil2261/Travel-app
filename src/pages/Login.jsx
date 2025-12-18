@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { validateMobile } from '../utils/validator.js';
 import '../styles/login-register.css';
 import bg from '../assets/bglogin.png';
+import googleIcon from '../icons/google-icon.png'
+import gmailIcon from '../icons/gmail-icon.png'
 
 export default function Login() {
   const navigate = useNavigate();
@@ -58,11 +60,11 @@ export default function Login() {
 
         <div className="social-wrapper">
           <button className="social-btn">
-            <img src="/icons/google.svg" alt="Google" />
+            <img src={googleIcon} alt="Google" />
             <span>Sign up with Google</span>
           </button>
           <button className="social-btn">
-            <img src="/icons/mail.svg" alt="Email" />
+            <img src={gmailIcon} alt="Email" />
             <span>Sign up with Email</span>
           </button>
         </div>
