@@ -515,3 +515,50 @@
 .m-nav-item.active .m-nav-icon {
   transform: scale(1.1);
 }
+
+/* 
+======================================================== */
+/* mobile-login */
+
+.login-mobile {
+  min-height: 100vh;
+  background: #0b3c2d;
+}
+
+.login-bg {
+  height: 45vh;
+  background: url('/src/assets/login-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 40px 20px;
+}
+
+.login-card {
+  background: white;
+  margin: -60px 16px 0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.phone-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.phone-row input {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #d1d5db;
+  border: none;
+  font-weight: 700;
+}

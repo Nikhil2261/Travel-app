@@ -1,0 +1,153 @@
+.login-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.login-card p {
+  margin: 8px 0 24px;
+  color: #6b7280;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+  gap: 10px;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.dlogin-btn {
+  margin-top: 18px;
+  width: 77%;
+  height: 52px;
+  background: #1f6cff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mlogin-btn {
+  margin-top: 18px;
+  width: 100%;
+  height: 52px;
+  background: #1f6cff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 22px 0;
+  position: relative;
+}
+
+.divider span {
+  background: white;
+  padding: 0 10px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.divider::before {
+  content: '';
+  height: 1px;
+  background: #e5e7eb;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.referral {
+  margin-top: 18px;
+  color: #1f6cff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ===== MOBILE ===== */
+.mobile-card {
+  width: calc(60% - 62px);
+  padding: 24px;
+}
+
+@media (max-width: 640px) {
+  .login-card h2 {
+    font-size: 20px;
+  }
+}

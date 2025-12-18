@@ -323,11 +323,7 @@ body {
   color: #ffffff;
 }
 
-/* make footer content fit inside .container width */
-.footer-inner.container {
-  /* padding-left: 0;
-  padding-right: 0; */
-}
+
 
 /* Responsive: stack on small screens */
 @media (max-width: 640px) {
@@ -935,4 +931,24 @@ position: absolute;
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
+}
+
+/* 
+login page
+================================================================= */
+
+.login-desktop {
+  min-height: 100vh;
+  background: url('/src/assets/login-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-desktop-card {
+  background: white;
+  width: 420px;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }

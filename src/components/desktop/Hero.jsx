@@ -3,6 +3,9 @@ import React from 'react';
 import SearchCard from './SearchCard';
 import heroImg from '../../assets/9579893.avif';
 import logoImg from '../../assets/logo_3.png';
+import { Link } from 'react-router-dom';
+
+
 
 export default function Hero(){
   return (
@@ -25,7 +28,11 @@ export default function Hero(){
 </div>
 
       <div className="hero-actions">
-        <button className="btn-ghost">Login / Create Account</button>
+        {/* <button className="btn-ghost">Login / Create Account</button> */}
+        <Link to="/login">
+  <button className="btn-ghost">Login / Create Account</button>
+</Link>
+
         <select>
           <option>INR</option>
         </select>
