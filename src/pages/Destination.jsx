@@ -3,10 +3,10 @@ import DesktopDestination from "../components/desktop/destination/DesktopDestina
 import MobileDestination from "../components/mobile/destination/MobileDestination";
 
 export default function Destination() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    const onResize = () => setIsMobile(window.innerWidth <= 425);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);

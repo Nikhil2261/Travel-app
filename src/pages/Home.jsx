@@ -14,7 +14,7 @@ import Footer from '../components/desktop/Footer.jsx';
 import MobileHome from '../components/mobile/MobileHome.jsx';
 
 export default function Home(){
-  const isMobile = useIsMobile(768); // breakpoint: <=768px will use mobile
+  const isMobile = useIsMobile(425); // breakpoint: <=768px will use mobile
 
   if (isMobile) {
     // Render the mobile-optimized page

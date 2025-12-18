@@ -1,39 +1,5 @@
-// import NearbyPlacesMobile from "./NearbyPlacesMobile";
-// import backIcon from "../../../icons/Group 1.png";
-// import heartIcon from "../../../icons/Like-Icon.png";
-
-// export default function DestinationHeroMobile() {
-//   return (
-//     <div className="dest-hero-mobile">
-      
-//       {/* HERO IMAGE */}
-//       <img
-//         src="/src/assets/darjeeling.jpg"
-//         alt="Darjeeling"
-//         className="dest-hero-img"
-//       />
-
-//       {/* TOP ICONS */}
-//       <button className="dest-back">
-//         <img src={backIcon} alt="Back" />
-//       </button>
-
-//       <button className="dest-like">
-//         <img src={heartIcon} alt="Like" />
-//       </button>
-
-//       {/* NEARBY PLACES */}
-//       <div className="nearby-wrap">
-//         <div className="nearby-title">Nearby Places</div>
-//         <NearbyPlacesMobile />
-//       </div>
-
-//     </div>
-//   );
-// }
 
 
-// components/mobile/destination/MobileDestHero.jsx
  import backIcon from "../../../icons/Group 1.png";
  import heartIcon from "../../../icons/Like-Icon.png";
 

@@ -1,7 +1,7 @@
 // src/hooks/useIsMobile.js
 import { useState, useEffect } from 'react';
 
-export default function useIsMobile(breakpoint = 768) {
+export default function useIsMobile(breakpoint = 425) {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window.innerWidth <= breakpoint : false
   );

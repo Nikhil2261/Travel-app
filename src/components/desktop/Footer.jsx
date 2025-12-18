@@ -1,4 +1,7 @@
-// src/components/Footer.jsx
+import { CiInstagram } from "react-icons/ci";
+import { IoLogoFacebook } from "react-icons/io";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaWhatsappSquare } from "react-icons/fa";
 import React from 'react';
 
 export default function Footer() {
@@ -7,13 +10,13 @@ export default function Footer() {
       <div className="footer-inner container">
         <div className="footer-left">
           <div className="footer-icons">
-            <div className="footer-icon" aria-hidden />
-            <div className="footer-icon" aria-hidden />
-            <div className="footer-icon" aria-hidden />
-            <div className="footer-icon" aria-hidden />
+            <div><CiInstagram size={40} /></div>
+            <div><IoLogoFacebook size={40} /></div>
+            <div><FaSquareXTwitter size={35} /></div>
+            <div><FaWhatsappSquare  size={35}/></div>
           </div>
         </div>
-
+       
         <div className="footer-right">
           <div className="copyright">Copyright 2025 Company Pvt. Ltd</div>
         </div>
