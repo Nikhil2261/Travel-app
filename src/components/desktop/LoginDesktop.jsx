@@ -37,7 +37,7 @@ export default function LoginDesktop() {
           </button>
         </div>
 
-        <div className="referral">Have a Referral Code?</div>
+        <div className="referral">NEW USER</div>
 
         <div className="login-footer">
           By proceeding, you agree to our <b>Privacy Policy</b> & <b>T&C</b>
