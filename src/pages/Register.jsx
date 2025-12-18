@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateEmail, validateMobile, validateName } from '../utils/validator.js';
-import '../styles/login.css';
+import '../styles/login-register.css';
 import bg from '../assets/bglogin.png';
 
 export default function Register() {
