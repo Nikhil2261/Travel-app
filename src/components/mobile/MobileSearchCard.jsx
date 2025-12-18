@@ -1,10 +1,17 @@
-
 import React, { useState } from 'react';
+
+// Import your icon images
+import departureIcon from '../../icons/departure.png';
+import arrivalIcon from '../../icons/arrival.png';
+import calendarIcon from '../../icons/calendar.png';
+import travelerIcon from '../../icons/traveler.png';
 
 function FieldRow({ icon, label, main, sub, alignTop }) {
   return (
     <div className="m-field-row">
-      <div className="m-field-icon">{icon}</div>
+      <div className="m-field-icon">
+        <img src={icon} alt={label} />
+      </div>
       <div className={`m-field-text ${alignTop ? 'm-field-text-top' : ''}`}>
         <div className="m-field-label">{label}</div>
         <div className="m-field-main">{main}</div>
@@ -42,21 +49,21 @@ export default function MobileSearchCard() {
       </div>
 
       <FieldRow
-        icon="🛫"
+        icon={departureIcon}
         label="FROM"
         main="Pakyong PKG"
         sub="Pakyong Domestic-SK"
       />
 
       <FieldRow
-        icon="🛬"
+        icon={arrivalIcon}
         label="TO"
         main="Kolkata CCU"
         sub="Netaji Subash Chandra Bose…WB"
       />
 
       <FieldRow
-        icon="📅"
+        icon={calendarIcon}
         label="DEPARTURE DATE"
         main="08 APR Fri, 2025"
       />
@@ -71,7 +78,7 @@ export default function MobileSearchCard() {
       </div>
 
       <FieldRow
-        icon="👤"
+        icon={travelerIcon}
         label="TRAVELLERS & CLASS"
         main="1 Economy/Premium Economy"
         alignTop
