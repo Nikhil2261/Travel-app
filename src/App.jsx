@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register'
 import Destination from './pages/Destination';
-import DestinationMobile from './pages/DestinationMobile';
+
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<Navigate to="/login" />} />
         <Route path="/destination" element={<Destination />} />
-      <Route path="/destination-mobile" element={<DestinationMobile />} />
+     
       </Routes>
     </BrowserRouter>
 
